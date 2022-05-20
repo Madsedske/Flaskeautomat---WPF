@@ -166,7 +166,8 @@
             </Grid>
 
             <Button Style="{DynamicResource ButtonStyle}" Background="Green" x:Name="moneyButton"
-                    Content="Take Money" Margin="52,218,117,217" />
+                    Content="Take Money" Margin="52,218,117,217"
+                    Click="moneyButton_Click"/>
             <Label x:Name="Display" HorizontalAlignment="Left" Margin="58,321,0,0" VerticalAlignment="Top" Height="117" Width="130"/>
         </Grid>
 

@@ -10,6 +10,8 @@ namespace Flaskeautomat___WPF
 {
     public class Consumer
     {
+        public double AllMoney { get; private set; }
+
         public event EventHandler<Bottle> bottleHandlerEvent;
         public event EventHandler<CostumersMoney> costumerHandlerEvent;
 
@@ -29,14 +31,20 @@ namespace Flaskeautomat___WPF
             faxeKondiBottles = producedFaxeKondi;
         }
 
-        public void SendMoney(CostumersMoney money)
+        public void WithdrawMoney()
+        {
+            AllMoney = 0;
+        }
+
+        public void DisplayMoney(CostumersMoney money)
         {
             costumerHandlerEvent?.Invoke(this, money);
         }
 
         public void AllCoins(double removedBottle)
         {
-            removedBottle = removedBottle + costumersMoney.Money;
+            AllMoney = AllMoney + removedBottle;
+            DisplayMoney(new CostumersMoney(AllMoney));           
         }
 
         public void DisplayBottle(Bottle bottleName)

@@ -63,7 +63,7 @@ namespace Flaskeautomat___WPF
 
         public void Machine_MoneyCollect(object? sender, CostumersMoney e)
         {
-            Dispatcher.Invoke(() => { AllCoins.Content = e.Money.ToString(); });
+            Dispatcher.Invoke(() => { AllCoins.Content = e.Money.ToString() + " Kr"; });
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -113,6 +113,11 @@ namespace Flaskeautomat___WPF
                 string actualName = Regex.Replace(fileName, "([a-z])([A-Z])", "$1 $2"); // If the final word we get from filename have a 'A-Z' inside the word, we make a space between.
                 recycleMachine.ProduceBottle(actualName);
             }
+        }
+
+        private void moneyButton_Click(object sender, RoutedEventArgs e)
+        {
+            consumer.WithdrawMoney();
         }
     }
 }
