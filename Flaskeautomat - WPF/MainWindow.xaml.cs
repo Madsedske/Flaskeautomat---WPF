@@ -53,7 +53,7 @@ namespace Flaskeautomat___WPF
             threadHeinekenConsumer.Start();       
 
             consumer.bottleHandlerEvent += Machine_bottleHandlerEvent;
-            consumer.costumerHandlerEvent += Machine_MoneyCollect;
+            consumer.costumerHandlerEvent += Machine_MoneyToCollect;
         }
 
         private void Machine_bottleHandlerEvent(object? sender, Bottle e)
@@ -61,7 +61,7 @@ namespace Flaskeautomat___WPF
             Dispatcher.Invoke(() => { Display.Content = e.BottleName.ToString(); });
         }
 
-        public void Machine_MoneyCollect(object? sender, CostumersMoney e)
+        public void Machine_MoneyToCollect(object? sender, CostumersMoney e)
         {
             Dispatcher.Invoke(() => { AllCoins.Content = e.Money.ToString() + " Kr"; });
         }

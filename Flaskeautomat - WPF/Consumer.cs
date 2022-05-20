@@ -15,7 +15,6 @@ namespace Flaskeautomat___WPF
         public event EventHandler<Bottle> bottleHandlerEvent;
         public event EventHandler<CostumersMoney> costumerHandlerEvent;
 
-        CostumersMoney costumersMoney;
         Queue<CocaCola> cocaColaBottles;
         Queue<Heineken> heinekenBottles;
         Queue<Carlsberg> carlsbergbottles;
@@ -34,6 +33,7 @@ namespace Flaskeautomat___WPF
         public void WithdrawMoney()
         {
             AllMoney = 0;
+            DisplayMoney(new CostumersMoney(AllMoney));
         }
 
         public void DisplayMoney(CostumersMoney money)
