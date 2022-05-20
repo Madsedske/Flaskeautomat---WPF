@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Flaskeautomat___WPF</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pictures\Carlsberg.jpg" />
+    <None Remove="Pictures\CocaCola.png" />
+    <None Remove="Pictures\FaxeKondi.png" />
+    <None Remove="Pictures\Heineken.png" />
+    <None Remove="Pictures\machine.PNG" />
+    <None Remove="Pictures\Urge.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pictures\Carlsberg.jpg" />
+    <Resource Include="Pictures\CocaCola.png" />
+    <Resource Include="Pictures\FaxeKondi.png" />
+    <Resource Include="Pictures\Heineken.png" />
+    <Resource Include="Pictures\machine.PNG" />
+    <Resource Include="Pictures\Urge.png" />
+  </ItemGroup>
+
+</Project>
