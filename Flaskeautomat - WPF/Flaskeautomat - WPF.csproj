@@ -14,6 +14,7 @@
     <None Remove="Pictures\FaxeKondi.png" />
     <None Remove="Pictures\Heineken.png" />
     <None Remove="Pictures\machine.PNG" />
+    <None Remove="Pictures\MachineBetter.PNG" />
     <None Remove="Pictures\Urge.png" />
   </ItemGroup>
 
@@ -23,6 +24,7 @@
     <Resource Include="Pictures\FaxeKondi.png" />
     <Resource Include="Pictures\Heineken.png" />
     <Resource Include="Pictures\machine.PNG" />
+    <Resource Include="Pictures\MachineBetter.PNG" />
     <Resource Include="Pictures\Urge.png" />
   </ItemGroup>
 

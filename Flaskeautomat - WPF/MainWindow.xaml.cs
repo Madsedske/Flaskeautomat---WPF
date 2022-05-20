@@ -63,7 +63,7 @@ namespace Flaskeautomat___WPF
 
         public void Machine_MoneyToCollect(object? sender, CostumersMoney e)
         {
-            Dispatcher.Invoke(() => { AllCoins.Content = e.Money.ToString() + " Kr"; });
+            Dispatcher.Invoke(() => { AllCoins.Content = "Samlet\n" +  e.Money.ToString() + " Kr"; });
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
